@@ -31,7 +31,7 @@ function renderCafe(doc){
 }
 
 //getting collections
-db.collection('cafes').get().then(snapshot => {
+db.collection('cafes').orderBy('city').get().then(snapshot => {
     snapshot.docs.forEach(doc => {
         renderCafe(doc);
     });
