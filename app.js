@@ -13,11 +13,15 @@ function renderCafe(doc){
     li.setAttribute('data-id', doc.id);
     name.textContent = doc.data().name;
     city.textContent = doc.data().city;
+    cross.textContent = 'x';
 
     li.appendChild(name);
     li.appendChild(city);
+    li.appendChild(cross);
 
     cafeList.appendChild(li);
+
+    // deleting data
 
 }
 
